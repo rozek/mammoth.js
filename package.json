@@ -51,7 +51,8 @@
     "pretest": "eslint lib test",
     "test": "mocha 'test/**/*.tests.js'",
     "check-typescript": "tsc --noEmit lib/index.d.ts",
-    "prepare": "make mammoth.browser.min.js"
+    "prepare": "make mammoth.browser.min.js",
+    "postprepare":"cp mammoth.browser.min.js mammoth.browser.esm.js && echo 'export default mammoth;' >> mammoth.browser.esm.js"
   },
   "license": "BSD-2-Clause",
   "engines": {

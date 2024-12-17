@@ -9,6 +9,10 @@ For instance,
 Mammoth converts any paragraph with the style `Heading 1` to `h1` elements,
 rather than attempting to exactly copy the styling (font, text size, colour, etc.) of the heading.
 
+> Nota bene: in addition to the original, this fork adds a file "mammoth.browser.esm.js" which may be imported into a browser at runtime (i.e., without requiring a bundler):
+>
+> `const mammoth = await import("https://rozek.github.io/mammoth.js/mammoth.browser.esm.js")`
+
 There's a large mismatch between the structure used by .docx and the structure of HTML,
 meaning that the conversion is unlikely to be perfect for more complicated documents.
 Mammoth works best if you only use styles to semantically mark up your document.
